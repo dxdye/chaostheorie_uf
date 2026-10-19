@@ -1,25 +1,41 @@
 <script setup>
 // Bifurkationsdiagramm der logistischen Abbildung x(n+1) = R·x(n)·(1−x(n)),
 // live im Browser berechnet. Die drei Bereiche sind wie in der Zeitschere-Grafik eingefärbt.
-import { onMounted, ref } from 'vue'
+// Optional: `marker` zeichnet eine senkrechte Linie beim aktuellen R (für die Slider-Simulation).
+// `plain` zeichnet nur Punkte und Farbbänder ohne Achsen und Text (Hintergrund der Titelfolie).
+import { onMounted, ref, watch } from 'vue'
+
+const props = defineProps({
+  marker: { type: Number, default: null },
+  plain: { type: Boolean, default: false },
+})
 
 const canvas = ref(null)
 const RMIN = 2.5
 const RMAX = 4.0
 const CHAOS = 3.5699
 
+let draw = null // zeichnet Grundbild + Marker neu
+
 onMounted(() => {
   const c = canvas.value
-  const W = 900
-  const H = 480
+  const plain = props.plain
+  const W = plain ? 980 : 900
+  const H = plain ? 552 : 480
   const dpr = window.devicePixelRatio || 1
   c.width = W * dpr
   c.height = H * dpr
-  const ctx = c.getContext('2d')
-  ctx.scale(dpr, dpr)
   const fg = getComputedStyle(c).color
 
-  const m = { l: 48, r: 14, t: 28, b: 38 }
+  // Das statische Diagramm wird einmal in einen Offscreen-Canvas gerechnet,
+  // der Marker kann danach beliebig oft darüber gezeichnet werden.
+  const base = document.createElement('canvas')
+  base.width = W * dpr
+  base.height = H * dpr
+  const ctx = base.getContext('2d')
+  ctx.scale(dpr, dpr)
+
+  const m = plain ? { l: 0, r: 0, t: 0, b: 0 } : { l: 48, r: 14, t: 28, b: 38 }
   const pw = W - m.l - m.r
   const ph = H - m.t - m.b
   const X = R => m.l + (R - RMIN) / (RMAX - RMIN) * pw
@@ -40,7 +56,7 @@ onMounted(() => {
     ctx.fillRect(X(a), m.t, X(b) - X(a), ph)
     ctx.globalAlpha = 1
     ctx.fillStyle = fg
-    ctx.fillText(label, (X(a) + X(b)) / 2, m.t - 10)
+    if (!plain) ctx.fillText(label, (X(a) + X(b)) / 2, m.t - 10)
   }
 
   // Punkte: je R-Wert Einschwingen, dann die Langzeitwerte zeichnen
@@ -57,6 +73,14 @@ onMounted(() => {
     }
   }
   ctx.globalAlpha = 1
+
+  if (plain) {
+    // Nur Punkte und Bänder: direkt in den sichtbaren Canvas kopieren, kein Marker
+    const out = c.getContext('2d')
+    out.scale(dpr, dpr)
+    out.drawImage(base, 0, 0, W, H)
+    return
+  }
 
   // Bifurkationspunkte
   ctx.strokeStyle = fg
@@ -91,9 +115,44 @@ onMounted(() => {
   ctx.textAlign = 'center'
   ctx.fillText('x', 0, 0)
   ctx.restore()
+
+  // Sichtbarer Canvas: Grundbild plus Marker
+  const out = c.getContext('2d')
+  out.scale(dpr, dpr)
+  draw = () => {
+    out.clearRect(0, 0, W, H)
+    out.drawImage(base, 0, 0, W, H)
+    const R = props.marker
+    if (R == null) return
+    out.fillStyle = '#2563eb'
+    out.strokeStyle = '#2563eb'
+    out.font = 'bold 14px sans-serif'
+    const label = `R = ${de(R.toFixed(2))}`
+    if (R < RMIN) {
+      // links außerhalb des gezeichneten Bereichs
+      out.textAlign = 'left'
+      out.fillText(`◀ ${label}`, m.l + 6, m.t + 18)
+      return
+    }
+    out.lineWidth = 2.5
+    out.beginPath()
+    out.moveTo(X(R), m.t)
+    out.lineTo(X(R), m.t + ph)
+    out.stroke()
+    const left = R < (RMIN + RMAX) / 2
+    out.textAlign = left ? 'left' : 'right'
+    out.fillText(label, X(R) + (left ? 7 : -7), m.t + 18)
+  }
+  draw()
 })
+
+watch(() => props.marker, () => draw && draw())
 </script>
 
 <template>
-  <canvas ref="canvas" class="w-full" style="aspect-ratio: 900 / 480" />
+  <canvas
+    ref="canvas"
+    class="w-full"
+    :style="plain ? 'height: 100%; display: block; object-fit: cover' : 'aspect-ratio: 900 / 480'"
+  />
 </template>

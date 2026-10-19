@@ -18,11 +18,19 @@ themeConfig:
   primary: '#c8102e'
 ---
 
+<div class="absolute inset-0 opacity-25 pointer-events-none">
+<Bifurkation plain />
+</div>
+
+<div class="relative">
+
 # Chaostheorie in der Unternehmensführung
 
 ## Rückkopplungen, Synchronisation und die Zeitschere
 
 Benötigte vs. verfügbare Reaktionszeit
+
+</div>
 
 <div class="abs-bl m-6 text-sm opacity-70 text-left">
 Master Systems Engineering · Unternehmensführung<br>
@@ -30,6 +38,7 @@ Name · Datum
 </div>
 
 <!--
+Cliffhanger: Das Muster im Hintergrund nicht erklären. Nur ein Satz: „Dieses Bild ist Ihre Jahresplanung. In 30 Minuten können Sie es lesen.“ Auflösung auf der Folie mit dem Bifurkationsdiagramm.
 Einstieg mit einer Frage ans Publikum: Wie lange dauert es in eurem Unternehmen von einem Marktsignal bis zur umgesetzten Entscheidung? Und wie lange hat der Markt gewartet?
 -->
 
@@ -398,7 +407,29 @@ zoom: 0.9
 </v-clicks>
 
 <!--
+Rückgriff auf die Titelfolie: „Das ist das Bild aus dem Hintergrund am Anfang. Jetzt können Sie es lesen.“
 Das Diagramm wird live im Browser berechnet (components/Bifurkation.vue). Bereiche wie in der Zeitschere-Grafik: grün bis R = 3, gelb bis 3,57, rot darüber. Bei R ≈ 3,83 ist das Ordnungsfenster (3er-Zyklus) als heller Streifen sichtbar.
+-->
+
+---
+class: text-sm
+---
+
+# Live: Die Dynamik steigt, der Planungstakt bleibt
+
+Jahresplanung ($h$ = 1), Start bei 10 % des Marktpotenzials – der Regler erhöht **nur die Marktdynamik** $r$:
+
+<Oszillation />
+
+<!--
+Regler langsam nach rechts ziehen (oder ▶ für den automatischen Durchlauf):
+- r·h ≤ 1 (R ≤ 2): glatte S-Kurve – das Lebenszyklusmodell.
+- r·h ≈ 1,8: erstes Überschießen, gedämpfte Schwingung, aber immer noch stabil.
+- r·h = 2 (R = 3): erste Bifurkation – die Schwingung klingt nicht mehr ab, Dauerzyklus (Schweinezyklus).
+- r·h ≈ 2,45 und 2,54: 4er- und 8er-Zyklus.
+- r·h ≈ 2,57 (R ≈ 3,57): deterministisches Chaos.
+- r·h ≈ 2,83 kurz anhalten: Ordnungsfenster mit 3er-Zyklus mitten im Chaos.
+Rechts wandert der Marker durch das Bifurkationsdiagramm, links sieht man dieselbe Stelle als Zeitreihe. Die Organisation (Regel, Takt, Startwert) ist in allen Fällen identisch.
 -->
 
 ---
