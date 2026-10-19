@@ -1,8 +1,8 @@
 # Chaostheorie in der Unternehmensführung
 
-Vortragsfolien für das Modul Unternehmensführung (Master Systems Engineering, SE38). Die Präsentation ist mit [Slidev](https://sli.dev) gebaut und wird automatisch als Website veröffentlicht:
+Vortragsfolien für das Modul Unternehmensführung im Master Systems Engineering. Die Präsentation ist mit [Slidev](https://sli.dev) gebaut und wird automatisch als Website veröffentlicht:
 
-**https://dxdye.github.io/unternehmensfuehrung_SE38/**
+**https://dxdye.github.io/chaostheorie_uf/**
 
 ## Worum es geht
 
