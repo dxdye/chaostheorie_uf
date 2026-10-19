@@ -738,10 +738,10 @@ zoom: 0.8
 
 ### A · $T_B$ senken
 
-- Kürzere Zyklen: rollierende Forecasts, Quartals-OKR, Sprints
-- Dezentrale Entscheidungen (Subsidiarität)
-- Vorab entschiedene Reaktionen: „Frühindikator X > Schwelle Y → Maßnahme Z"
-- Modularität in Produkt- und Organisationsarchitektur (SE-Prinzip)
+- Kürzere Zyklen: rollierende Forecasts statt Jahresbudget (Hope & Fraser 2003), Quartals-OKR, Sprints
+- Dezentrale Entscheidungen: Wissen ist verteilt, also muss es die Entscheidung auch sein (Hayek 1945)
+- Vorab entschiedene Reaktionen: „Frühindikator X > Schwelle Y → Maßnahme Z"; Entscheidung dorthin, wo die Expertise sitzt (Weick & Sutcliffe 2007)
+- Modularität in Produkt- und Organisationsarchitektur (Baldwin & Clark 2000; Haberfellner et al.)
 
 </div>
 <div class="p-3 rounded bg-green-500/10">
@@ -749,34 +749,64 @@ zoom: 0.8
 ### B · $T_V$ verlängern
 
 - Schwache Signale früh erkennen (Ansoff 1975)
-- Frühwarnindikatoren, z. B. Erholungszeit nach Störungen
-- Szenarien statt Punktprognosen
-- Puffer: Lager, Liquidität, Kapazitätsreserven, Dual Sourcing
+- Frühwarnindikatoren, z. B. Erholungszeit nach Störungen (Scheffer et al. 2009)
+- Szenarien statt Punktprognosen (Wack 1985; Schoemaker 1995)
+- Puffer: Lager, Liquidität, Kapazitätsreserven, Dual Sourcing (Sheffi 2005; Chopra & Sodhi 2004)
 
 </div>
 <div class="p-3 rounded bg-red-500/10">
 
 ### C · Dynamik entschärfen
 
-- **Dämpfen:** halbe statt volle Anpassung halbiert das effektive $r h$ (2,7 → 1,35: Chaos → stabil)
-- Pipeline mitrechnen (bestellt, aber noch nicht geliefert)
-- Informationsverzögerungen beseitigen: Daten teilen (VMI, CPFR)
-- Synchronisation gestalten: intern koppeln, extern nicht der Herde folgen
+- **Dämpfen:** halbe statt volle Anpassung halbiert das effektive $r h$ (2,7 → 1,35: Chaos → stabil) (Sterman 1989)
+- Pipeline mitrechnen (bestellt, aber noch nicht geliefert) – der häufigste Fehler im Beer Game (Sterman 1989)
+- Informationsverzögerungen beseitigen: Daten teilen, VMI (Lee, Padmanabhan & Whang 1997), CPFR
+- Synchronisation gestalten: intern koppeln, extern nicht der Herde folgen (Strogatz 2003)
 
 </div>
 <div class="p-3 rounded bg-gray-500/10">
 
 ### D · Grundhaltung
 
-- Robustheit vor Optimierung
-- Ashby: Die Steuerung muss so vielfältig sein wie das Umfeld (*requisite variety*)
-- Boyd (OODA-Loop): Wer schneller beobachtet, einordnet, entscheidet und handelt, verkürzt die verfügbare Zeit der Konkurrenz
+- Robustheit vor Optimierung (Holling 1973; Taleb 2012)
+- Ashby (1956): Die Steuerung muss so vielfältig sein wie das Umfeld (*requisite variety*)
+- Boyd (OODA-Loop): Wer schneller beobachtet, einordnet, entscheidet und handelt, verkürzt die verfügbare Zeit der Konkurrenz (Boyd 1987; Osinga 2007)
 
 </div>
 </div>
 
 <!--
 A und B schließen die Zeitschere von unten bzw. oben. C ist der eigentliche Beitrag der Chaostheorie: Man verändert die Dynamik des Systems selbst. Dämpfung kostet allerdings Geschwindigkeit.
+Belege: Hope & Fraser begründen Beyond Budgeting mit der Starrheit des Jahresbudgets. Hayek 1945: Das Preissystem funktioniert, weil Wissen dezentral vorliegt. Weick & Sutcliffe: High-Reliability-Organisationen achten auf schwache Signale, begrenzen Fehler früh und verlagern Entscheidungen zur Expertise („defer to expertise“); vorab geplante Reaktionen sind nicht ihr Punkt, sie betonen eher Improvisationsfähigkeit. Sterman 1989: Im Beer Game ignorieren Versuchspersonen die Supply Line und überreagieren; Lee et al. 1997 nennen Informationsteilung und VMI als Gegenmittel zum Bullwhip. Holling 1973 unterscheidet Resilienz von Stabilität.
+-->
+
+---
+class: text-sm
+---
+
+# Warum die Wirtschaft trotzdem funktioniert
+
+Wenn so viele Unternehmen jenseits von $R = 3{,}57$ steuern – warum gerät nicht alles aus den Fugen?
+
+<v-clicks>
+
+1. **Chaos ist beschränkt, nicht grenzenlos.** Auch im Chaos bleibt $x$ zwischen 0 und 133 %. Das System pendelt unvorhersagbar um die Sättigung, es explodiert nicht. Chaos heißt Prognoseverlust, nicht Zusammenbruch – der Schweinezyklus läuft seit 100 Jahren (May 1976; Hanau 1928; Ezekiel 1938)
+2. **Niemand passt voll an.** Entscheider reagieren vorsichtig, teilweise und mit Erfahrung aus dem letzten Zyklus. Halbe Anpassung halbiert das effektive $r h$ – die Wirtschaft dämpft sich selbst, meist unbewusst (adaptive Erwartungen: Nerlove 1958; Sterman 1989)
+3. **Preise sind ein schneller Takt.** Wo laufend angepasst wird, ist $h$ klein und $R$ weit unter 3. Zyklen entstehen nur bei institutionell langem Takt: Kapazitäten, Immobilien, Ausbildung, Chipfabriken (Hayek 1945; Fine 1998)
+4. **Viele Akteure, viele Takte.** Tausende Unternehmen mit verschiedenem $h$ und $r$ sind nicht synchron; ihre Schwingungen mitteln sich im Aggregat weg. Krisen sind die Momente, in denen die Kopplung über die Schwelle springt und alle gleichzeitig dasselbe tun (Kuramoto 1984; Haldane & May 2011)
+5. **Institutionen sind eingebaute Puffer und Dämpfer.** Lager, Verträge, Zentralbanken, Versicherungen, Regulierung verlängern $T_V$ und senken $r h$ – die Hebel B und C in gesellschaftlicher Form (Simon 1962; Sheffi 2005)
+
+</v-clicks>
+
+<div v-click class="mt-3 p-3 border-l-4 border-red-600 bg-red-600/10">
+
+Die Wirtschaft funktioniert **wegen** ihrer Dämpfung, Vielfalt und Puffer. Gefährlich wird die Zeitschere dort, wo Effizienzdenken genau diese Reserven abbaut: Just-in-time, Gleichlauf durch dieselben Benchmarks, Zentralisierung (Haldane & May 2011; Taleb 2012)
+
+</div>
+
+<!--
+Antwort auf den naheliegenden Einwand. Verbindung zum Fallbeispiel: Toyota hatte Puffer (Punkt 5), die Branche insgesamt war synchronisiert (Punkt 4). Punkt 1: In der Kapazitätsform bleibt x für r·h ≤ 3 im Intervall [0; 4/3], der Mittelwert über viele Zyklen liegt weiterhin nahe 100 %.
+Belege: Ezekiel 1938 formalisiert den Schweinezyklus als Cobweb-Theorem; Nerlove 1958 zeigt, dass adaptive Erwartungen (teilweise Anpassung) den Cobweb stabilisieren. Haldane & May 2011 übertragen Mays Ökologie-Resultate auf Banken: Homogenität und enge Kopplung machen das Gesamtsystem fragil, Vielfalt stabilisiert es. Simon 1962: Komplexe Systeme überleben, weil sie aus nahezu entkoppelten Teilsystemen bestehen.
 -->
 
 ---
@@ -785,19 +815,23 @@ A und B schließen die Zeitschere von unten bzw. oben. C ist der eigentliche Bei
 
 <v-clicks>
 
-- Die Zuordnung der drei Perioden zu den Bereichen der Gleichung ist eine **Analogie**, kein empirischer Beweis
-- Die Modelle sind **stark vereinfacht** – reale Märkte haben viele Variablen und äußere Schocks
-- Echtes deterministisches Chaos lässt sich in Wirtschaftsdaten **kaum nachweisen**: kurze, verrauschte Zeitreihen, schwierige Abgrenzung zum Zufall
-- Parameter wie $r$ oder $\lambda$ sind in der Praxis **nicht direkt messbar**
-- Menschen **lernen**: Wer das Muster erkennt, ändert sein Verhalten – und damit die Gleichung
+- Die Zuordnung der drei Perioden zu den Bereichen der Gleichung ist eine **Analogie**, kein empirischer Beweis (zur Debatte: Rosser 1999)
+- Die Modelle sind **stark vereinfacht** – reale Märkte haben viele Variablen und äußere Schocks (Sterman 2000)
+- Echtes deterministisches Chaos lässt sich in Wirtschaftsdaten **kaum nachweisen**: kurze, verrauschte Zeitreihen, schwierige Abgrenzung zum Zufall (Brock & Sayers 1988)
+- Parameter wie $r$ oder $\lambda$ sind in der Praxis **nicht direkt messbar** – im Labor dagegen schon: Mosekilde, Larsen & Sterman (1991) finden Chaos in Beer-Game-Entscheidungen
+- Menschen **lernen**: Wer das Muster erkennt, ändert sein Verhalten – und damit die Gleichung (Muth 1961; Lucas 1976)
 
 </v-clicks>
 
 <div v-click class="mt-6 p-3 border-l-4 border-red-600 bg-red-600/10">
 
-Der Wert liegt nicht in exakten Prognosen, sondern in **strukturellen Einsichten**: Wo entstehen Verzögerungen, Kopplungen und Verstärkungen?
+Der Wert liegt nicht in exakten Prognosen, sondern in **strukturellen Einsichten**: Wo entstehen Verzögerungen, Kopplungen und Verstärkungen? (Senge 1990; Sterman 2000)
 
 </div>
+
+<!--
+Brock & Sayers 1988 testen US-Konjunkturdaten auf deterministisches Chaos und finden Nichtlinearität, aber keinen belastbaren Chaos-Nachweis. Rosser 1999 fasst die Debatte um Chaos in der Ökonomik zusammen. Muth 1961: Unter rationalen Erwartungen verschwinden Cobweb-Zyklen, weil Akteure das Muster antizipieren. Lucas 1976: Verhaltensparameter ändern sich, sobald sich die Regeln ändern – ein geschätztes r gilt nur für die Vergangenheit.
+-->
 
 ---
 layout: center
@@ -814,31 +848,47 @@ layout: center
 
 </v-clicks>
 
+<div v-click class="mt-8 max-w-3xl mx-auto text-sm italic opacity-80">
+
+„Nicht nur in der Forschung, auch in der Alltagswelt von Politik und Wirtschaft wären wir alle besser dran, wenn mehr Menschen begriffen, dass einfache nichtlineare Systeme nicht notwendigerweise einfache dynamische Eigenschaften besitzen."
+
+<div class="not-italic text-xs mt-1 opacity-80">Robert M. May (1976), *Nature* 261, Schlussabsatz – eigene Übersetzung</div>
+
+</div>
+
+<!--
+Original: "Not only in research, but also in the everyday world of politics and economics, we would all be better off if more people realised that simple nonlinear systems do not necessarily possess simple dynamical properties." – May, R. M. (1976), Nature 261, S. 467.
+-->
+
 ---
 class: text-xs
 ---
 
-# Literatur (1/2)
+# Literatur (1/3)
 
 <div class="grid grid-cols-2 gap-6">
 <div>
 
 - Ansoff, H. I. (1975): Managing Strategic Surprise by Response to Weak Signals. *California Management Review* 18(2)
 - Ashby, W. R. (1956): *An Introduction to Cybernetics*
+- Baldwin, C. Y. & Clark, K. B. (2000): *Design Rules, Volume 1: The Power of Modularity*. Cambridge, MA: MIT Press
 - Bleicher, K.: *Das Konzept Integriertes Management*
+- Boyd, J. R. (2018 [1987]): *A Discourse on Winning and Losing*. Hg. v. G. T. Hammond. Maxwell AFB: Air University Press
+- Brock, W. A. & Sayers, C. L. (1988): Is the Business Cycle Characterized by Deterministic Chaos? *Journal of Monetary Economics* 22(1), 71–90
+- Chopra, S. & Sodhi, M. S. (2004): Managing Risk to Avoid Supply-Chain Breakdown. *MIT Sloan Management Review* 46(1), 53–61
 - D'Aveni, R. A. (1994): *Hypercompetition*
-- Feigenbaum, M. J. (1978): Quantitative Universality for a Class of Nonlinear Transformations. *Journal of Statistical Physics* 19
-- Fine, C. H. (1998): *Clockspeed*
 
 </div>
 <div>
 
+- Ezekiel, M. (1938): The Cobweb Theorem. *Quarterly Journal of Economics* 52(2), 255–280
+- Feigenbaum, M. J. (1978): Quantitative Universality for a Class of Nonlinear Transformations. *Journal of Statistical Physics* 19
+- Fine, C. H. (1998): *Clockspeed*
 - Forrester, J. W. (1961): *Industrial Dynamics*
 - Haberfellner, R. et al.: *Systems Engineering – Grundlagen und Anwendung*
+- Haldane, A. G. & May, R. M. (2011): Systemic Risk in Banking Ecosystems. *Nature* 469(7330), 351–355
 - Hanau, A. (1928): *Die Prognose der Schweinepreise*
-- Hutchinson, G. E. (1948): Circular Causal Systems in Ecology. *Annals of the New York Academy of Sciences* 50
-- Kuramoto, Y. (1984): *Chemical Oscillations, Waves, and Turbulence*
-- Li, T.-Y. & Yorke, J. A. (1975): Period Three Implies Chaos. *American Mathematical Monthly* 82
+- Hayek, F. A. (1945): The Use of Knowledge in Society. *American Economic Review* 35(4), 519–530
 
 </div>
 </div>
@@ -851,27 +901,62 @@ Vor der Abgabe Auflagen und Seitenzahlen prüfen.
 class: text-xs
 ---
 
-# Literatur (2/2)
+# Literatur (2/3)
 
 <div class="grid grid-cols-2 gap-6">
 <div>
 
+- Holling, C. S. (1973): Resilience and Stability of Ecological Systems. *Annual Review of Ecology and Systematics* 4, 1–23
+- Hope, J. & Fraser, R. (2003): *Beyond Budgeting: How Managers Can Break Free from the Annual Performance Trap*. Boston: Harvard Business School Press
+- Hutchinson, G. E. (1948): Circular Causal Systems in Ecology. *Annals of the New York Academy of Sciences* 50
+- Kuramoto, Y. (1984): *Chemical Oscillations, Waves, and Turbulence*
+- Lee, H. L., Padmanabhan, V. & Whang, S. (1997): The Bullwhip Effect in Supply Chains. *Sloan Management Review* 38(3), 93–102
+- Li, T.-Y. & Yorke, J. A. (1975): Period Three Implies Chaos. *American Mathematical Monthly* 82
 - Lorenz, E. N. (1963): Deterministic Nonperiodic Flow. *Journal of the Atmospheric Sciences* 20
-- May, R. M. (1976): Simple Mathematical Models with Very Complicated Dynamics. *Nature* 261
-- Mosekilde, E., Larsen, E. R. & Sterman, J. D. (1991): Coping with Complexity: Deterministic Chaos in Human Decision Making Behavior
-- Pecora, L. M. & Carroll, T. L. (1990): Synchronization in Chaotic Systems. *Physical Review Letters* 64
-- Scheffer, M. et al. (2009): Early-Warning Signals for Critical Transitions. *Nature* 461
-- Sterman, J. D. (1989): Modeling Managerial Behavior. *Management Science* 35(3)
+- Lucas, R. E. (1976): Econometric Policy Evaluation: A Critique. *Carnegie-Rochester Conference Series on Public Policy* 1, 19–46
 
 </div>
 <div>
 
+- May, R. M. (1976): Simple Mathematical Models with Very Complicated Dynamics. *Nature* 261, 459–467
+- Mosekilde, E., Larsen, E. R. & Sterman, J. D. (1991): Coping with Complexity: Deterministic Chaos in Human Decisionmaking Behavior. In: Casti, J. L. & Karlqvist, A. (Hg.): *Beyond Belief*. Boca Raton: CRC Press, 199–229
+- Muth, J. F. (1961): Rational Expectations and the Theory of Price Movements. *Econometrica* 29(3), 315–335
+- Nerlove, M. (1958): Adaptive Expectations and Cobweb Phenomena. *Quarterly Journal of Economics* 72(2), 227–240
+- Osinga, F. P. B. (2007): *Science, Strategy and War: The Strategic Theory of John Boyd*. London: Routledge
+- Pecora, L. M. & Carroll, T. L. (1990): Synchronization in Chaotic Systems. *Physical Review Letters* 64
+- Rosser, J. B. (1999): On the Complexities of Complex Economic Dynamics. *Journal of Economic Perspectives* 13(4), 169–192
+- Scheffer, M. et al. (2009): Early-Warning Signals for Critical Transitions. *Nature* 461
+
+</div>
+</div>
+
+---
+class: text-xs
+---
+
+# Literatur (3/3)
+
+<div class="grid grid-cols-2 gap-6">
+<div>
+
+- Schoemaker, P. J. H. (1995): Scenario Planning: A Tool for Strategic Thinking. *Sloan Management Review* 36(2), 25–40
+- Senge, P. M. (1990): *The Fifth Discipline: The Art and Practice of the Learning Organization*. New York: Doubleday/Currency
+- Sheffi, Y. (2005): *The Resilient Enterprise: Overcoming Vulnerability for Competitive Advantage*. Cambridge, MA: MIT Press
+- Simon, H. A. (1962): The Architecture of Complexity. *Proceedings of the American Philosophical Society* 106(6), 467–482
+- Sterman, J. D. (1989): Modeling Managerial Behavior: Misperceptions of Feedback in a Dynamic Decision Making Experiment. *Management Science* 35(3), 321–339
 - Sterman, J. D. (2000): *Business Dynamics*
 - Strebel, P. (1992): *Breakpoints*
+
+</div>
+<div>
+
 - Strogatz, S. H. (2003): *Sync*
 - Strogatz, S. H. et al. (2005): Crowd Synchrony on the Millennium Bridge. *Nature* 438
+- Taleb, N. N. (2012): *Antifragile: Things That Gain from Disorder*. New York: Random House
 - Verhulst, P.-F. (1838): Notice sur la loi que la population suit dans son accroissement
 - Vester, F.: *Die Kunst vernetzt zu denken*
+- Wack, P. (1985): Scenarios: Uncharted Waters Ahead. *Harvard Business Review* 63(5), 72–89
+- Weick, K. E. & Sutcliffe, K. M. (2007): *Managing the Unexpected: Resilient Performance in an Age of Uncertainty*. 2. Aufl., San Francisco: Jossey-Bass
 
 </div>
 </div>
