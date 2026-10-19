@@ -329,7 +329,7 @@ class: text-sm
 
 Jahresplanung ($h$ = 1 Jahr), Start bei 10 %, Ziel 100 % des Marktpotenzials – nur die Marktdynamik $r$ steigt:
 
-| $r \cdot h$ | $R$ | Kapazität in % des Potenzials je Planungszyklus | Verhalten |
+| $r \cdot h$ | $R$ | Kapazität in % des Potenzials je Planungszyklus\* | Verhalten |
 |---|---|---|---|
 | 0,5 | 1,5 | 10 → 15 → 21 → 29 → 39 → 51 → 64 → 75 → 84 → 91 → 95 | glatte Annäherung |
 | 1,0 | 2,0 | 10 → 19 → 34 → 57 → 81 → 97 → 100 | schnell, ohne Überschießen |
@@ -342,6 +342,8 @@ Jahresplanung ($h$ = 1 Jahr), Start bei 10 %, Ziel 100 % des Marktpotenzials –
 Die Organisation hat sich **nicht verändert** – nur das Umfeld ist dynamischer geworden. Werte über 100 % bedeuten Überkapazität.
 
 </div>
+
+<div class="abs-bl m-4 text-xs opacity-60">* Werte aus eigener Simulation (Python)</div>
 
 <!--
 Werte aus eigener Simulation (Python). Gleiche Entscheidungsregel, gleicher Takt – nur r steigt. Genau das beschreibt die Vorlesungsfolie: Das Umfeld wird schneller, die Planungsroutinen bleiben.
@@ -441,7 +443,7 @@ class: text-sm
 
 ::left::
 
-**Zwei fast identische Startwerte** ($r h$ = 2,7)
+**Zwei fast identische Startwerte** ($r h$ = 2,7)\*
 
 | Planungszyklus | Abweichung |
 |---|---|
@@ -463,6 +465,8 @@ class: text-sm
 | $10^{-6}$ | 16,6 |
 
 → **1000-mal genauere Daten** bringen nur **10 Perioden** mehr Vorlauf
+
+<div class="abs-bl m-4 text-xs opacity-60">* Werte aus eigener Simulation (Python) · rechte Tabelle rechnerisch aus λ = ln 2</div>
 
 <!--
 Werte aus eigener Simulation. Jede Verzehnfachung der Datenqualität bringt nur ln(10)/ln(2) ≈ 3,3 Perioden.
@@ -622,7 +626,7 @@ $$
 
 | Kopplung $\varepsilon$ | 0 | 0,10 | 0,15 | **0,20** | 0,30 | 0,40 |
 |---|---|---|---|---|---|---|
-| Ø-Abstand der Einheiten | 0,34 | 0,45 | 0,41 | **≈ 0** | ≈ 0 | ≈ 0 |
+| Ø-Abstand der Einheiten\* | 0,34 | 0,45 | 0,41 | **≈ 0** | ≈ 0 | ≈ 0 |
 
 Synchronisation ab $\;\varepsilon > \dfrac{1 - e^{-\lambda}}{2} \approx 0{,}195\;$ (bei $R = 4$ erst ab 0,25)
 
@@ -633,6 +637,8 @@ Synchronisation ab $\;\varepsilon > \dfrac{1 - e^{-\lambda}}{2} \approx 0{,}195\
 - **Spieltheorie:** Wettbewerber, die sich stark aneinander orientieren, erleben Boom und Absturz **gemeinsam** – antizyklisches Handeln heißt, die Kopplung bewusst zu lockern
 
 </v-clicks>
+
+<div class="abs-bl m-4 text-xs opacity-60">* Werte aus eigener Simulation (Python)</div>
 
 <!--
 Werte aus eigener Simulation; die Schwelle 0,195 passt zur Theorie (lambda bei R = 3,9 ≈ 0,50).
